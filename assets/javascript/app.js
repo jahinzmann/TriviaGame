@@ -15,10 +15,14 @@
 4. Score
 */
 
-(function(window) {
-    'use strict';
+$(document).ready(function() {
+    //'use strict';
 
-    var counter, time, timeRemaining, rightAnswers, choicesArray
+    var counter;
+    var time;
+    var timeRemaining;
+    var rightAnswer;
+    var choicesArray;
 
     var triviaQuestions = [{
             question: "This author of Lord of the Rings was also an Oxford philologist",
@@ -100,22 +104,21 @@
 
 
 
-    function buildGame(triviaQuestions) {
+    function buildGame() {
         choicesArray = [];
         for (var i = 0; i < 10; i++) {
             console.log(choicesArray);
             choicesArray = [];
-            //choicesArray[i].push(triviaQuestions[i].);
-            choicesArray[i].push(triviaQuestions[i]({ rightAnswer: value))
+            choicesArray.push(triviaQuestions[i]);
+            choicesArray.push(triviaQuestions[i].rightAnswer);
             };
             console.log(choicesArray);
             // $("#choices").append("<li>" + "<input type=" + "radio" + "triviaQuestions" + i +  " value=" + "\"" +  + triviaQuestions[i].question + "</li>");
             console.log(triviaQuestions);
 
         }
-    }
 
-    buildGame();
+buildGame();
 
     function finalCountdown(t) {
         var minutes = Math.floor(t / 60);
@@ -143,13 +146,12 @@
             counter = setInterval(timer, 1000);
 
 
+        });
+
+
+}) //End document.ready
 
 
 
-        }) //End document.ready
 
 
-
-
-
-})(window); // End of IFFE
