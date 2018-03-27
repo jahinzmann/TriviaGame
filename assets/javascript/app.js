@@ -30,13 +30,13 @@ let triviaQuestions = [
     {question8: "Which of these Shakespeare plays was the basis for Akira Kurosawa's 1985 film 'Ran'?", rightAnswer: "King Lear", wrongAnswer1: "Hamlet", wrongAnswer2:"The Tempest", wrongAnswer3:"Romeo and Juliet"},
     {question9: "The individual most often considered the inventor of the computer was also a gay and autistic man named:", rightAnswer: "Alan Turing", wrongAnswer1: "Charles Babbage", wrongAnswer2:"Bill Gates", wrongAnswer3: "Steve Jobs"},
     {question10: "This founding figure of sociology also served as a contributing author to the constitution of Germany's short-lived Weimar Republic", rightAnswer: "Max Weber", wrongAnswer1: "Emile Durkheim", wrongAnswer2: "Raymond Aaron", wrongAnswer3: "Jurgen Habermas"},
-    ]
+]
 
 $("#questionBox").append("<ul>" + "<li>" + triviaQuestions[0].question1);
     console.log(triviaQuestions[0].question1)
 //randomize the order in which the possible answers appear on each rendering
     //10 identical functions, one for each question, each with it's own timer w/ set-timeout?
-
+   
 
 
 
@@ -47,8 +47,7 @@ $("#questionBox").append("<ul>" + "<li>" + triviaQuestions[0].question1);
 // for (var i = 0; i < triviaQuestions.length; i++) {
 //
 //}
-
-
+    
 
 
 
