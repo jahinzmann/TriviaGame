@@ -21,87 +21,70 @@
 
     var counter, time, timeRemaining, rightAnswers, choicesArray
 
-    let triviaQuestions = [{
-            question: "This author of Lord of the Rings was also an Oxford Philologist",
+    var triviaQuestions = [{
+            question: "This author of Lord of the Rings was also an Oxford philologist",
             rightAnswer: "J.R.R. Tolkien",
-            wrongAnswer: "George R.R. Martin",
-            wrongAnswer: "J.D. Salinger",
-            wrongAnswer: "C.S. Lewis"
+            wrongAnswers: ["George R.R. Martin", "J.D. Salinger", "C.S. Lewis"]
+
         },
 
         {
             question: "Homer J. Simpson's full middle name is:",
             rightAnswer: "Jay",
-            wrongAnswer: "John",
-            wrongAnswer: "James",
-            wrongAnswer: "Jeffrey"
+            wrongAnswers: ["John", "James", "Jeffrey"]
         },
 
         {
             question: "This famous filmmaker is behind such animation classics as 'Howl's Moving Castle' and 'Castle in the Sky':",
             rightAnswer: "Hiyao Miyazaki",
-            wrongAnswer: "John Lassiter",
-            wrongAnswer: "Walt Disney",
-            wrongAnswer: "Tex Avery"
+            wrongAnswers: ["John Lassiter", "Walt Disney", "Tex Avery"]
         },
 
         {
             question: "This famous Russian-born composer was the only one to both leave and then voluntarily return to the Soviet Union before his death:",
             rightAnswer: "Sergei Prokofiev",
-            wrongAnswer: "Igor Stravinsky",
-            wrongAnswer: "Dimitri Shostakovitch",
-            wrongAnswer: "Pytor Illyich Tchaikovsky"
+            wrongAnswers: ["Igor Stravinsky", "Dimitri Shostakovitch", "Pytor Illyich Tchaikovsky"]
         },
 
         {
             question: "This famous psychologist did controversial experiments testing whether subjects would give lethal electric shocks once ordered to by an authority figure:",
             rightAnswer: "Stanley Milgram",
-            wrongAnswer: "Philip Zimbardo",
-            wrongAnswer: "Sigmund Freud",
-            wrongAnswer: "Joseph Mengele"
+            wrongAnswers: ["Philip Zimbardo", "Sigmund Freud", "Joseph Mengele"]
         },
 
         {
             question: "The first female Vice-Presidential candidate in U.S. history was:",
             rightAnswer: "Geraldine Ferraro",
-            wrongAnswer: "Hillary Clinton",
-            wrongAnswer: "Sarah Palin",
-            wrongAnswer: "Carly Fiorina"
+            wrongAnswers: ["Hillary Clinton", "Sarah Palin", "Carly Fiorina"]
         },
 
         {
             question: "The P.T. Anderson film 'There Will Be Blood' was based on which work by Upton Sinclair:?",
             rightAnswer: "Oil!",
-            wrongAnswer: "The Jungle",
-            wrongAnswer: "The Brass Check",
-            wrongAnswer: "The Fountainhead"
+            wrongAnswers: ["The Jungle", "The Brass Check", "The Fountainhead"]
         },
 
         {
             question: "Which of these Shakespeare plays was the basis for Akira Kurosawa's 1985 film 'Ran'?",
             rightAnswer: "King Lear",
-            wrongAnswer: "Hamlet",
-            wrongAnswer: "The Tempest",
-            wrongAnswer: "Romeo and Juliet"
+            wrongAnswers: ["Hamlet", "The Tempest", "Romeo and Juliet"]
         },
 
         {
             question: "The individual most often considered the inventor of the computer was also a gay and autistic man named:",
             rightAnswer: "Alan Turing",
-            wrongAnswer: "Charles Babbage",
-            wrongAnswer: "Bill Gates",
-            wrongAnswer: "Steve Jobs"
+            wrongAnswers: ["Charles Babbage", "Bill Gates", "Steve Jobs"]
         },
 
         {
             question: "This founding figure of sociology also served as a contributing author to the constitution of Germany's short-lived Weimar Republic",
             rightAnswer: "Max Weber",
-            wrongAnswer: "Emile Durkheim",
-            wrongAnswer: "Raymond Aaron",
-            wrongAnswer: "Jurgen Habermas"
+            wrongAnswers: ["Emile Durkheim", "Raymond Aaron", "Jurgen Habermas"]
         },
     ]
+    console.log(triviaQuestions);
 
+    /*
     function randomQuestionOrder(array) {
         for (var r = array.length - 1; r >= 0; r--) {
             var randomIndex = Math.floor(Math.random() * r + 1);
@@ -112,23 +95,28 @@
         return array;
         console.log(array);
     }
+    */
 
-    choicesArray = randomQuestionOrder(triviaQuestions);
-    console.log(choicesArray);
+    //choicesArray = randomQuestionOrder(triviaQuestions);
 
 
 
-    function buildGame(triviaQuestions, choicesArray) {
-        for (var i = 0; i < triviaQuestions.length; i++) {
-            choicesArray[i].push(triviaQuestions[i].wrongAnswer);
-            choicesArray[i].push(triviaQuestions[i].rightAnswer);
-            $("#questionBox").append("<ul>" + "<li id=" + "triviaQuestions" + i + ">" + triviaQuestions[i].question + "</li>");
-            console.log(triviaQuestions);
+    function buildGame(triviaQuestions) {
+        choicesArray = [];
+        for (var i = 0; i < 10; i++) {
             console.log(choicesArray);
+            choicesArray = [];
+            //choicesArray[i].push(triviaQuestions[i].);
+            choicesArray[i].push(triviaQuestions[i]({ rightAnswer: value))
+            };
+            console.log(choicesArray);
+            // $("#choices").append("<li>" + "<input type=" + "radio" + "triviaQuestions" + i +  " value=" + "\"" +  + triviaQuestions[i].question + "</li>");
+            console.log(triviaQuestions);
+
         }
     }
 
-    buildGame(triviaQuestions)
+    buildGame();
 
     function finalCountdown(t) {
         var minutes = Math.floor(t / 60);
